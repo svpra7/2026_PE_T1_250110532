@@ -1,0 +1,121 @@
+body {
+    background-color: #222; /* Gris oscuro estándar */
+    color: #eee;
+    font-family: Arial, sans-serif; /* Fuente básica */
+    margin: 0;
+    padding: 20px;
+}
+
+.main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    padding: 20px;
+    border: 1px solid #555; /* Borde simple visible */
+    margin-bottom: 30px;
+    text-align: center; /* CENTRADO SIMPLE */
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #9D4EDD; /* Tu color morado */
+}
+
+.header-content p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #555;
+    margin: 15px auto; /* Margen automático para centrar la línea */
+    width: 80%; /* Línea no tan larga */
+}
+
+/* Secciones (Cajas simples) */
+.caja-seccion {
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    border-bottom: 2px solid #9D4EDD;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Texto explicativo */
+.explicacion {
+    background-color: #383838;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #9D4EDD;
+}
+
+/* Cuadros de datos */
+.resumen-datos {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.dato {
+    background-color: #333;
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: center;
+    flex: 1; 
+}
+
+.dato h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #fff;
+}
+
+/* Tablas y Gráficas */
+.contenido-grafico {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.tabla, .grafica {
+    flex: 1;
+    min-width: 300px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #333;
+}
+
+th, td {
+    border: 1px solid #555;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #444;
+    color: #9D4EDD;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    color: #888;
+    font-size: 14px;
+}

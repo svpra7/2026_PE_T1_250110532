@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Datos - Victor Ceron</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <header>
+            <div class="header-content">
+                <h1>PROYECTO: TIPOS DE DATOS</h1>
+                <p>Estudiante: Victor Ceron Sanchez | 2do Semestre</p>
+                <hr>
+                <p class="intro">Análisis estadístico de 100 estudiantes universitarios.</p>
+            </div>
+        </header>
+
+        <section class="caja-seccion">
+            <h2>1. Datos Cuantitativos Discretos</h2>
+            <div class="explicacion">
+                <p><strong>Definición:</strong> Son valores enteros que resultan de contar. No hay decimales.</p>
+                <p><strong>Caso:</strong> Materias reprobadas (0, 1, 2, etc.).</p>
+            </div>
+            
+            <div class="resumen-datos">
+                <div class="dato">
+                    <h3>100</h3>
+                    <p>Total (N)</p>
+                </div>
+                <div class="dato">
+                    <h3>0 - 5</h3>
+                    <p>Rango</p>
+                </div>
+                <div class="dato">
+                    <h3 id="disc-promedio">0.00</h3>
+                    <p>Promedio</p>
+                </div>
+            </div>
+
+            <div class="contenido-grafico">
+                <div class="tabla">
+                    <h3>Tabla de Frecuencias</h3>
+                    <table id="tabla-discretos">
+                        <thead>
+                            <tr>
+                                <th>Dato (x)</th>
+                                <th>Frecuencia (f)</th>
+                                <th>%</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="grafica">
+                    <canvas id="graficoDiscretos"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="caja-seccion">
+            <h2>2. Datos Cuantitativos Continuos</h2>
+            <div class="explicacion">
+                <p><strong>Definición:</strong> Valores que se miden y pueden tener decimales.</p>
+                <p><strong>Caso:</strong> Tiempo de traslado a la universidad (minutos).</p>
+            </div>
+
+            <div class="resumen-datos">
+                <div class="dato">
+                    <h3>100</h3>
+                    <p>Total (N)</p>
+                </div>
+                 <div class="dato">
+                    <h3 id="cont-minmax">0 - 0</h3>
+                    <p>Min - Max</p>
+                </div>
+                <div class="dato">
+                    <h3 id="cont-promedio">0.00</h3>
+                    <p>Promedio</p>
+                </div>
+            </div>
+
+            <div class="contenido-grafico">
+                <div class="tabla">
+                     <h3>Datos Agrupados</h3>
+                    <table id="tabla-continuos">
+                        <thead>
+                            <tr>
+                                <th>Intervalo</th>
+                                <th>Marca (x)</th>
+                                <th>Frecuencia (f)</th>
+                                <th>%</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="grafica">
+                    <canvas id="graficoContinuos"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="caja-seccion">
+            <h2>3. Datos Cualitativos</h2>
+            <div class="explicacion">
+                <p><strong>Definición:</strong> Cualidades o categorías, no son números.</p>
+                <p><strong>Caso:</strong> Cafetería favorita.</p>
+            </div>
+
+            <div class="contenido-grafico">
+                <div class="tabla">
+                    <h3>Tabla Categórica</h3>
+                    <table id="tabla-cualitativos">
+                        <thead>
+                            <tr>
+                                <th>Categoría</th>
+                                <th>Frecuencia (f)</th>
+                                <th>%</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="grafica">
+                     <canvas id="graficoCualitativos"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Desarrollado por: <strong>Victor Ceron Sanchez</strong></p>
+            <p>Materia: Probabilidad y Estadística</p>
+        </footer>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
