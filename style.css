@@ -1,190 +1,103 @@
-:root {
-    
-    --color-1: #021024; 
-    --color-2: #052659; 
-    --color-3: #5483B3; 
-    --color-4: #7DA0CA; 
-    --color-5: #C1E8FF;
-    
-    --text-white: #ffffff;
+/* Estilos base */
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #f4f7f6; 
+    color: #333; 
+    margin: 0; 
+    padding: 0; 
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+.hero-container { 
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); 
+    color: white; 
+    padding: 3rem 1rem; 
+    text-align: center; 
 }
 
-body {
-    background-color: var(--color-1);
-    color: var(--color-5);
-    line-height: 1.6;
+.main-wrapper { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 2rem 1rem; 
 }
 
-.hero-container {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, var(--color-1), var(--color-2));
-    border-bottom: 3px solid var(--color-3);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+.project-card { 
+    background: white; 
+    border-radius: 12px; 
+    padding: 2rem; 
+    margin-bottom: 3rem; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
 }
 
-.hero-content h1 {
-    font-weight: 800;
-    font-size: 2.5rem;
-    color: var(--text-white);
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+.data-grid { 
+    display: grid; 
+    grid-template-columns: repeat(20, 1fr); 
+    gap: 5px; 
+    margin-top: 1rem; 
 }
 
-.subtitle {
-    color: var(--color-4);
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
+.datum { 
+    background: #e0e7ff; 
+    padding: 5px; 
+    text-align: center; 
+    border-radius: 4px; 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+    color: #1e3c72; 
 }
 
-.divider {
-    height: 3px;
-    width: 100px;
-    background-color: var(--color-3);
-    margin: 1.5rem auto;
-    border-radius: 2px;
+/* Estilos de las Tablas */
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 1rem; 
+    font-size: 0.95rem; 
 }
 
-.student-info {
-    color: var(--color-5);
-    font-weight: 300;
+th, td { 
+    border: 1px solid #ddd; 
+    padding: 12px; 
+    text-align: center; 
 }
 
-.main-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+th { 
+    background-color: #f8fafc; 
+    color: #1e3c72; 
 }
 
-.project-card {
-    background-color: var(--color-2);
-    border-radius: 15px;
-    padding: 2rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-    border: 1px solid var(--color-3);
+.gallery-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 1.5rem; 
+    margin-top: 2rem; 
 }
 
-.card-header h2 {
-    color: var(--text-white);
-    border-bottom: 2px solid var(--color-3);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.context {
-    color: var(--color-4);
-    font-style: italic;
-    margin-bottom: 2rem;
-}
-
-h3 {
-    color: var(--color-5);
-    margin: 1.5rem 0 1rem;
-    font-weight: 600;
-}
-
-.data-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.datum {
-    background-color: var(--color-1);
-    color: var(--color-5);
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border: 1px solid var(--color-3);
-    transition: all 0.3s ease;
-}
-
-.datum:hover {
-    background-color: var(--color-3);
-    color: var(--text-white);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-}
-
-.table-container {
-    overflow-x: auto;
-    margin-bottom: 2rem;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    background-color: var(--color-1);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-thead {
-    background-color: var(--color-3);
-    color: var(--text-white);
-}
-
-th, td {
-    padding: 12px 15px;
-    border: 1px solid var(--color-2);
-}
-
-tbody tr:nth-child(even) {
-    background-color: rgba(5, 38, 89, 0.5); 
-}
-
-tbody tr:hover {
-    background-color: var(--color-2);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
+/* 🔥 LA ANIMACIÓN MAMALONA 🔥 */
 .img-box {
-    background-color: var(--color-1);
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid var(--color-3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    background: white;
 }
 
 .img-box img {
-    max-width: 100%;
-    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
 .img-box:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(84, 131, 179, 0.4); 
-    border-color: var(--color-5);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    z-index: 10;
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--color-1);
-    color: var(--color-4);
-    border-top: 2px solid var(--color-2);
-    margin-top: 2rem;
+/* Pie de página */
+footer { 
+    text-align: center; 
+    padding: 2rem; 
+    color: #7f8c8d; 
+    font-size: 0.9rem; 
 }

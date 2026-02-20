@@ -11,9 +11,9 @@
 
     <header class="hero-container">
         <div class="hero-content">
-            <p class="subtitle">PROBABILIDAD Y ESTADÍSTICA</p>
+            <p class="subtitle" style="letter-spacing: 2px;">PROBABILIDAD Y ESTADÍSTICA</p>
             <h1>Repositorio de Evidencias</h1>
-            <div class="divider"></div>
+            <div style="width: 50px; height: 3px; background: #f1c40f; margin: 15px auto;"></div>
             <p class="student-info">Victor Ceron Sanchez &bull; Ing. TIC's</p>
         </div>
     </header>
@@ -23,17 +23,16 @@
         <section class="project-card">
             <div class="card-header">
                 <h2>01. Datos Cuantitativos Discretos</h2>
-                <p class="context">Contexto: Número de paneles solares instalados en 100 viviendas sustentables.</p>
+                <p class="context"><strong>Contexto del problema:</strong> Una empresa de energías renovables evalúa el número de paneles solares de alto rendimiento instalados por vivienda en un fraccionamiento sustentable de 100 casas. Se busca determinar la capacidad instalada promedio.</p>
             </div>
 
             <div class="raw-data-section">
-                <h3>Registro de los 100 Datos (N=100)</h3>
+                <h3>Registro de los 100 Datos Ordenados (N=100)</h3>
                 <div class="data-grid">
-                    <div class="datum">3</div><div class="datum">2</div><div class="datum">3</div><div class="datum">1</div><div class="datum">4</div><div class="datum">2</div><div class="datum">3</div><div class="datum">2</div><div class="datum">1</div><div class="datum">3</div><div class="datum">2</div><div class="datum">5</div><div class="datum">3</div><div class="datum">2</div><div class="datum">4</div><div class="datum">3</div><div class="datum">1</div><div class="datum">2</div><div class="datum">3</div><div class="datum">2</div>
-                    <div class="datum">3</div><div class="datum">4</div><div class="datum">2</div><div class="datum">1</div><div class="datum">3</div><div class="datum">2</div><div class="datum">5</div><div class="datum">3</div><div class="datum">2</div><div class="datum">1</div><div class="datum">4</div><div class="datum">3</div><div class="datum">2</div><div class="datum">3</div><div class="datum">1</div><div class="datum">2</div><div class="datum">3</div><div class="datum">2</div><div class="datum">4</div><div class="datum">3</div>
-                    <div class="datum">2</div><div class="datum">3</div><div class="datum">1</div><div class="datum">2</div><div class="datum">4</div><div class="datum">3</div><div class="datum">2</div><div class="datum">1</div><div class="datum">3</div><div class="datum">2</div><div class="datum">5</div><div class="datum">3</div><div class="datum">2</div><div class="datum">4</div><div class="datum">3</div><div class="datum">1</div><div class="datum">2</div><div class="datum">3</div><div class="datum">2</div><div class="datum">4</div>
-                    <div class="datum">3</div><div class="datum">1</div><div class="datum">2</div><div class="datum">3</div><div class="datum">2</div><div class="datum">4</div><div class="datum">3</div><div class="datum">2</div><div class="datum">1</div><div class="datum">3</div><div class="datum">2</div><div class="datum">5</div><div class="datum">3</div><div class="datum">2</div><div class="datum">4</div><div class="datum">3</div><div class="datum">1</div><div class="datum">2</div><div class="datum">3</div><div class="datum">2</div>
-                    <div class="datum">3</div><div class="datum">4</div><div class="datum">2</div><div class="datum">1</div><div class="datum">3</div><div class="datum">2</div><div class="datum">5</div><div class="datum">3</div><div class="datum">2</div><div class="datum">1</div><div class="datum">4</div><div class="datum">3</div><div class="datum">2</div><div class="datum">3</div><div class="datum">1</div><div class="datum">2</div><div class="datum">4</div><div class="datum">3</div><div class="datum">4</div><div class="datum">4</div>
+                    <script>
+                        const paneles = [...Array(5).fill(5), ...Array(15).fill(4), ...Array(35).fill(3), ...Array(30).fill(2), ...Array(15).fill(1)];
+                        paneles.forEach(d => document.write(`<div class="datum">${d}</div>`));
+                    </script>
                 </div>
             </div>
 
@@ -41,19 +40,18 @@
                 <h3>Tabla de Frecuencias</h3>
                 <table>
                     <thead>
-                        <tr><th>Clase (Paneles)</th><th>Frec. Absoluta (f)</th><th>Frec. Relativa (fr)</th><th>Frec. Acumulada (F)</th></tr>
+                        <tr><th>Clase (Paneles)</th><th>Frec. Absoluta (fa)</th><th>Frec. Relativa (fr)</th><th>Frec. Acumulada (facum)</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>1 Panel</td><td>15</td><td>0.15</td><td>15</td></tr>
-                        <tr><td>2 Paneles</td><td>30</td><td>0.30</td><td>45</td></tr>
-                        <tr><td>3 Paneles</td><td>35</td><td>0.35</td><td>80</td></tr>
-                        <tr><td>4 Paneles</td><td>15</td><td>0.15</td><td>95</td></tr>
-                        <tr><td>5 Paneles</td><td>5</td><td>0.05</td><td>100</td></tr>
+                        <tr><td>1 Panel</td><td>15</td><td>15%</td><td>15%</td></tr>
+                        <tr><td>2 Paneles</td><td>30</td><td>30%</td><td>45%</td></tr>
+                        <tr><td>3 Paneles</td><td>35</td><td>35%</td><td>80%</td></tr>
+                        <tr><td>4 Paneles</td><td>15</td><td>15%</td><td>95%</td></tr>
+                        <tr><td>5 Paneles</td><td>5</td><td>5%</td><td>100%</td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <h3>Visualización Gráfica</h3>
             <div class="gallery-grid">
                 <div class="img-box"><img src="imagenes/e1_histograma.png" alt="Histograma"></div>
                 <div class="img-box"><img src="imagenes/e1_poligono.png" alt="Polígono"></div>
@@ -65,18 +63,21 @@
 
         <section class="project-card">
             <div class="card-header">
-                <h2>02. Datos Cuantitativos Continuos</h2>
-                <p class="context">Contexto: Tiempo (segundos) de ensamblaje de microchips en una fábrica automatizada.</p>
+                <h2>02. Datos Cuantitativos Continuos (8 Clases)</h2>
+                <p class="context"><strong>Contexto del problema:</strong> En la industria de semiconductores, se midió el tiempo exacto (en milisegundos) que tarda un brazo robótico en soldar un microchip en 100 placas madre diferentes. Esto ayuda a detectar cuellos de botella en la producción.</p>
             </div>
 
             <div class="raw-data-section">
-                <h3>Registro de los 100 Datos (N=100)</h3>
+                <h3>Registro de los 100 Datos Ordenados (N=100)</h3>
                 <div class="data-grid">
-                    <div class="datum">32.5</div><div class="datum">24.1</div><div class="datum">45.2</div><div class="datum">15.4</div><div class="datum">38.9</div><div class="datum">28.4</div><div class="datum">31.2</div><div class="datum">22.5</div><div class="datum">18.7</div><div class="datum">36.1</div><div class="datum">26.3</div><div class="datum">52.4</div><div class="datum">34.8</div><div class="datum">29.1</div><div class="datum">42.6</div><div class="datum">33.5</div><div class="datum">12.1</div><div class="datum">25.8</div><div class="datum">39.2</div><div class="datum">21.4</div>
-                    <div class="datum">37.6</div><div class="datum">48.3</div><div class="datum">27.5</div><div class="datum">14.2</div><div class="datum">30.9</div><div class="datum">23.8</div><div class="datum">55.1</div><div class="datum">35.4</div><div class="datum">20.7</div><div class="datum">19.5</div><div class="datum">41.8</div><div class="datum">32.1</div><div class="datum">28.9</div><div class="datum">36.7</div><div class="datum">16.3</div><div class="datum">24.5</div><div class="datum">38.2</div><div class="datum">22.1</div><div class="datum">46.5</div><div class="datum">31.8</div>
-                    <div class="datum">26.7</div><div class="datum">34.2</div><div class="datum">11.5</div><div class="datum">29.6</div><div class="datum">44.1</div><div class="datum">39.8</div><div class="datum">25.3</div><div class="datum">17.8</div><div class="datum">33.1</div><div class="datum">21.9</div><div class="datum">58.2</div><div class="datum">30.4</div><div class="datum">27.1</div><div class="datum">43.7</div><div class="datum">37.3</div><div class="datum">13.6</div><div class="datum">28.2</div><div class="datum">35.9</div><div class="datum">23.4</div><div class="datum">49.1</div>
-                    <div class="datum">32.8</div><div class="datum">18.1</div><div class="datum">26.9</div><div class="datum">38.5</div><div class="datum">24.7</div><div class="datum">40.5</div><div class="datum">31.6</div><div class="datum">29.3</div><div class="datum">15.9</div><div class="datum">34.6</div><div class="datum">22.8</div><div class="datum">51.6</div><div class="datum">36.4</div><div class="datum">20.2</div><div class="datum">47.8</div><div class="datum">39.5</div><div class="datum">10.8</div><div class="datum">25.6</div><div class="datum">33.9</div><div class="datum">28.7</div>
-                    <div class="datum">37.1</div><div class="datum">42.3</div><div class="datum">21.1</div><div class="datum">19.2</div><div class="datum">30.7</div><div class="datum">27.8</div><div class="datum">59.4</div><div class="datum">35.1</div><div class="datum">23.2</div><div class="datum">16.8</div><div class="datum">45.7</div><div class="datum">38.1</div><div class="datum">26.5</div><div class="datum">32.4</div><div class="datum">14.9</div><div class="datum">29.8</div><div class="datum">41.2</div><div class="datum">31.4</div><div class="datum">48.9</div><div class="datum">43.2</div>
+                    <script>
+                        const chips = [
+                            ...Array(4).fill(55.2), ...Array(6).fill(48.7), ...Array(10).fill(42.3), 
+                            ...Array(17).fill(36.1), ...Array(25).fill(29.8), ...Array(18).fill(25.4), 
+                            ...Array(12).fill(18.9), ...Array(8).fill(13.2)
+                        ];
+                        chips.sort((a,b)=>b-a).forEach(d => document.write(`<div class="datum">${d}</div>`));
+                    </script>
                 </div>
             </div>
 
@@ -84,14 +85,17 @@
                 <h3>Tabla de Frecuencias Agrupadas</h3>
                 <table>
                     <thead>
-                        <tr><th>Clase</th><th>Lím. Inf.</th><th>Lím. Sup.</th><th>Marca (x)</th><th>(f)</th><th>(fr)</th><th>(F)</th></tr>
+                        <tr><th>Clase</th><th>Lím. Inf.</th><th>Lím. Sup.</th><th>marca de clase</th><th>fa</th><th>fr</th><th>facum</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Clase 1</td><td>10</td><td>20</td><td>15</td><td>10</td><td>0.10</td><td>10</td></tr>
-                        <tr><td>Clase 2</td><td>20</td><td>30</td><td>25</td><td>25</td><td>0.25</td><td>35</td></tr>
-                        <tr><td>Clase 3</td><td>30</td><td>40</td><td>35</td><td>40</td><td>0.40</td><td>75</td></tr>
-                        <tr><td>Clase 4</td><td>40</td><td>50</td><td>45</td><td>20</td><td>0.20</td><td>95</td></tr>
-                        <tr><td>Clase 5</td><td>50</td><td>60</td><td>55</td><td>5</td><td>0.05</td><td>100</td></tr>
+                        <tr><td>Clase 1</td><td>10.0</td><td>16.0</td><td>13.0</td><td>8</td><td>8%</td><td>8%</td></tr>
+                        <tr><td>Clase 2</td><td>16.0</td><td>22.0</td><td>19.0</td><td>12</td><td>12%</td><td>20%</td></tr>
+                        <tr><td>Clase 3</td><td>22.0</td><td>28.0</td><td>25.0</td><td>18</td><td>18%</td><td>38%</td></tr>
+                        <tr><td>Clase 4</td><td>28.0</td><td>34.0</td><td>31.0</td><td>25</td><td>25%</td><td>63%</td></tr>
+                        <tr><td>Clase 5</td><td>34.0</td><td>40.0</td><td>37.0</td><td>17</td><td>17%</td><td>80%</td></tr>
+                        <tr><td>Clase 6</td><td>40.0</td><td>46.0</td><td>43.0</td><td>10</td><td>10%</td><td>90%</td></tr>
+                        <tr><td>Clase 7</td><td>46.0</td><td>52.0</td><td>49.0</td><td>6</td><td>6%</td><td>96%</td></tr>
+                        <tr><td>Clase 8</td><td>52.0</td><td>58.0</td><td>55.0</td><td>4</td><td>4%</td><td>100%</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -108,17 +112,19 @@
         <section class="project-card">
             <div class="card-header">
                 <h2>03. Datos Cualitativos</h2>
-                <p class="context">Contexto: Nivel de satisfacción de 100 usuarios con una nueva App Ecológica.</p>
+                <p class="context"><strong>Contexto del problema:</strong> Tras lanzar una actualización mayor a una aplicación móvil ecológica, se encuestó a 100 usuarios sobre su nivel de satisfacción general con la nueva interfaz de usuario para futuras mejoras.</p>
             </div>
 
             <div class="raw-data-section">
-                <h3>Registro de los 100 Datos (N=100)</h3>
-                <div class="data-grid text-data">
-                    <div class="datum">Bueno</div><div class="datum">Regular</div><div class="datum">Bueno</div><div class="datum">Malo</div><div class="datum">Muy Bueno</div><div class="datum">Regular</div><div class="datum">Bueno</div><div class="datum">Regular</div><div class="datum">Malo</div><div class="datum">Bueno</div><div class="datum">Regular</div><div class="datum">Excelente</div><div class="datum">Bueno</div><div class="datum">Regular</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Malo</div><div class="datum">Regular</div><div class="datum">Bueno</div><div class="datum">Regular</div>
-                    <div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Regular</div><div class="datum">Malo</div><div class="datum">Bueno</div><div class="datum">Regular</div><div class="datum">Excelente</div><div class="datum">Bueno</div><div class="datum">Regular</div><div class="datum">Malo</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Regular</div><div class="datum">Bueno</div><div class="datum">Regular</div><div class="datum">Regular</div><div class="datum">Bueno</div><div class="datum">Regular</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div>
-                    <div class="datum">Regular</div><div class="datum">Bueno</div><div class="datum">Malo</div><div class="datum">Muy Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Malo</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Excelente</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Malo</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Muy Bueno</div>
-                    <div class="datum">Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Excelente</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div>
-                    <div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Excelente</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Bueno</div><div class="datum">Muy Bueno</div><div class="datum">Muy Bueno</div>
+                <h3>Registro de los 100 Datos Ordenados (N=100)</h3>
+                <div class="data-grid text-data" style="grid-template-columns: repeat(10, 1fr);">
+                    <script>
+                        const appData = [
+                            ...Array(10).fill("Excelente"), ...Array(30).fill("Muy Bueno"), 
+                            ...Array(40).fill("Bueno"), ...Array(15).fill("Regular"), ...Array(5).fill("Malo")
+                        ];
+                        appData.forEach(d => document.write(`<div class="datum" style="font-size: 0.75rem;">${d}</div>`));
+                    </script>
                 </div>
             </div>
 
@@ -126,14 +132,14 @@
                 <h3>Tabla Categórica</h3>
                 <table>
                     <thead>
-                        <tr><th>Clase (Categoría)</th><th>Frec. Absoluta (f)</th><th>Frec. Relativa (fr)</th><th>Frec. Acumulada (F)</th></tr>
+                        <tr><th>Categoría</th><th>fa</th><th>fr</th><th>facum</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Malo</td><td>5</td><td>0.05</td><td>5</td></tr>
-                        <tr><td>Regular</td><td>15</td><td>0.15</td><td>20</td></tr>
-                        <tr><td>Bueno</td><td>40</td><td>0.40</td><td>60</td></tr>
-                        <tr><td>Muy Bueno</td><td>30</td><td>0.30</td><td>90</td></tr>
-                        <tr><td>Excelente</td><td>10</td><td>0.10</td><td>100</td></tr>
+                        <tr><td>Excelente</td><td>10</td><td>10%</td><td>10%</td></tr>
+                        <tr><td>Muy Bueno</td><td>30</td><td>30%</td><td>40%</td></tr>
+                        <tr><td>Bueno</td><td>40</td><td>40%</td><td>80%</td></tr>
+                        <tr><td>Regular</td><td>15</td><td>15%</td><td>95%</td></tr>
+                        <tr><td>Malo</td><td>5</td><td>5%</td><td>100%</td></tr>
                     </tbody>
                 </table>
             </div>
